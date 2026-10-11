@@ -1,0 +1,28 @@
+HANDOFF: Amalphia Sylva belly dance site (moving from Linux server to Mac)
+
+WHAT THIS IS
+A finished static website (plain HTML/CSS, no build step) for belly dance classes in Biscoe, North Carolina. The deployable folder is site/. CLAUDE.md in this folder has the full plan and rules. Read it first.
+
+WHAT I WANT
+1. Publish site/ to Cloudflare Pages (free plan), project name amalphia-sylva. It should answer at https://amalphia-sylva.pages.dev.
+2. Connect my custom domain (registered at DreamHost) to it.
+3. Total cost should be just the domain renewal.
+
+HOW I WANT TO WORK
+- I am not technical. Give me one small step at a time, in plain words.
+- I am on a Mac with Chrome. Use the Claude in Chrome extension to click through the Cloudflare and DreamHost dashboards while I watch. I will sign in myself.
+- Deploying: run "npx wrangler login" on this Mac (browser and Wrangler are on the same machine, so it works), then "npx wrangler pages deploy site --project-name amalphia-sylva". No API token is needed this way. If Wrangler complains about the Node version, tell me and suggest the simplest fix.
+- Never ask me to paste passwords or tokens into chat. I enter those myself in the browser or terminal.
+- Ask me before changing DNS or nameservers. Before that, ask for the domain name and whether the domain has DreamHost email. If it does, copy every MX/TXT record into Cloudflare before changing nameservers, or email will stop.
+- Do not redesign the site. Do not invent class dates, prices or times.
+
+OPEN QUESTIONS (ask me)
+- What is the domain name, and is there DreamHost email on it?
+- Is the beginner fusion course actually running?
+- Do I have permission to use images/festival.jpg? It carries a Phoenix Rising Dance Festival watermark.
+
+AFTER DEPLOY
+Help me check the live site on a desktop and a phone-sized window: hero, class times, prices, email button, video links.
+
+BACKGROUND
+On the old Linux server, the newest Wrangler needed Node 22 and the server had Node 20, and browser login failed because the server was headless. Neither should matter on the Mac. Nothing has been deployed yet.

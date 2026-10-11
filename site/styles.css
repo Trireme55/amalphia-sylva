@@ -1,0 +1,149 @@
+:root{
+  --ink:#17121B; --plum:#241A2B; --cream:#F5EEE2; --sand:#EADFCC;
+  --teal:#1E6B63; --teal-light:#6FC3B5; --gold:#C9A35B; --line:#4A3D52;
+  --body:#3A323F; --pad:clamp(24px,6.7vw,96px);
+  --display:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0}
+p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{padding-inline:var(--pad)}
+.eyebrow{font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--teal)}
+.dark .eyebrow,.hero .eyebrow{color:var(--gold)}
+h2{font-size:clamp(38px,5vw,56px);line-height:1.05}
+.btn{display:inline-block;padding:16px 32px;font-size:17px;font-weight:500;text-align:center}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-ghost{border:1px solid var(--cream);color:var(--cream)}
+.btn-gold-outline{border:1px solid var(--gold);color:var(--gold)}
+
+/* Hero */
+.hero{position:relative;display:flex;flex-direction:column;min-height:780px;background:var(--ink);color:var(--cream);overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:70% 40%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,18,27,.94) 0%,rgba(23,18,27,.78) 38%,rgba(23,18,27,0) 72%)}
+.site-header{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;height:96px}
+.logo{font-family:var(--display);font-size:30px;font-weight:600;letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:36px;font-size:16px}
+.nav .cta{padding:12px 24px;border:1px solid var(--gold);color:var(--gold);font-weight:500}
+.hero-copy{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;max-width:calc(640px + 2 * var(--pad));padding-block:48px}
+.hero h1{font-size:clamp(52px,6.1vw,88px);line-height:.98;color:var(--cream)}
+.hero-copy p{font-size:20px;line-height:1.6;color:#E6DCCB;max-width:520px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.strip{position:relative;z-index:1;background:rgba(23,18,27,.88);padding-block:24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.strip div{display:flex;flex-direction:column;gap:4px;font-size:16px}
+.strip dt,.strip span.k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;padding-block:100px}
+.about img{width:100%;height:520px;object-fit:cover;object-position:50% 18%}
+.about-text{display:flex;flex-direction:column;gap:24px}
+.about-text p{font-size:19px;line-height:1.7;color:var(--body)}
+.tags{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 0;padding:0;list-style:none}
+.tags li{padding:8px 18px;border:1px solid var(--teal);color:var(--teal);font-size:15px}
+
+/* Classes */
+.dark{background:var(--ink);color:var(--cream)}
+.classes{padding-block:100px;display:flex;flex-direction:column;gap:48px}
+.classes header{display:flex;flex-direction:column;gap:16px;max-width:720px}
+.courses{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.course{padding:40px;border:1px solid var(--line);display:flex;flex-direction:column;gap:16px}
+.course .lvl{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-light);font-weight:500}
+.course h3{font-size:34px;font-weight:600}
+.course p{font-size:17px;line-height:1.65;color:#D9CFBF}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{padding:40px;background:var(--plum);display:flex;flex-direction:column;gap:14px}
+.card .k{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.card .big{font-family:var(--display);font-size:72px;font-weight:600;line-height:1}
+.card .times{font-family:var(--display);font-size:32px;font-weight:600;line-height:1.2}
+.card p{font-size:16px;line-height:1.6;color:#D9CFBF}
+.card .note{font-size:15px;color:#9FD6CC}
+.card.best{background:var(--gold);color:var(--ink)}
+.card.best .k{color:var(--ink)}
+.card.best p{color:var(--ink)}
+.classes-cta{align-self:flex-start}
+
+/* Welcome */
+.welcome{background:var(--sand);padding-block:100px;display:flex;flex-direction:column;gap:48px}
+.welcome h2{font-size:clamp(34px,4vw,48px)}
+.welcome ol{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin:0;padding:0;list-style:none}
+.welcome li{display:flex;flex-direction:column;gap:10px}
+.welcome .n{font-family:var(--display);font-size:36px;color:var(--teal);font-weight:600}
+.welcome strong{font-size:19px;font-weight:500}
+.welcome li span:last-child{font-size:16px;line-height:1.6;color:var(--body)}
+
+/* Watch */
+.watch{padding-block:100px;display:flex;flex-direction:column;gap:24px}
+.watch header{display:flex;flex-direction:column;gap:16px;margin-bottom:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid3 img{width:100%;object-fit:cover}
+.grid3.a img{height:380px}
+.grid3.a img:first-child{grid-column:span 2}
+.grid3.b img{height:260px}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.videos a{padding:32px;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.videos .t{font-family:var(--display);font-size:28px;font-weight:600}
+.videos .o{color:var(--gold);font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+
+/* Contact */
+.contact{background:var(--plum);color:var(--cream);padding-block:88px;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.contact-text{display:flex;flex-direction:column;gap:20px}
+.contact-text p{font-size:19px;line-height:1.6;color:#D9CFBF}
+.contact-text .btn{align-self:flex-start}
+.contact dl{margin:0;font-size:18px}
+.contact dl div{display:flex;justify-content:space-between;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.contact dl div:last-child{border-bottom:1px solid var(--line)}
+.contact dt{color:var(--gold);font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.contact dd{margin:0;text-align:right}
+.site-footer{background:var(--ink);color:#B9AEBE;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;font-size:14px}
+.site-footer .legal{flex-basis:100%;font-size:12px;color:#8F8596;letter-spacing:.02em}
+
+/* Tablet */
+@media (max-width:960px){
+  .nav a:not(.cta){display:none}
+  .about,.contact{grid-template-columns:1fr;gap:40px}
+  .about img{height:420px}
+  .pricing{grid-template-columns:1fr}
+  .welcome ol{grid-template-columns:1fr 1fr}
+}
+/* Phone */
+@media (max-width:640px){
+  .hero{min-height:900px}
+  .hero-bg img{object-position:82% 30%}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(23,18,27,.5) 0%,rgba(23,18,27,0) 22%,rgba(23,18,27,0) 40%,rgba(23,18,27,.94) 62%)}
+  .site-header{height:72px}
+  .logo{font-size:26px}
+  .nav .cta{padding:10px 16px;font-size:14px}
+  .hero-copy{justify-content:flex-end;padding-block:24px 40px;gap:16px}
+  .hero-copy p{font-size:17px}
+  .hero-actions .btn{flex:1 1 100%}
+  .strip{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .about,.classes,.welcome,.watch{padding-block:56px}
+  .contact{padding-block:56px}
+  .about img{height:380px}
+  .about-text p{font-size:17px}
+  .courses{grid-template-columns:1fr;gap:20px}
+  .course,.card{padding:28px}
+  .course h3{font-size:30px}
+  .card .big{font-size:64px}
+  .card .times{font-size:30px}
+  .classes-cta{align-self:stretch}
+  .welcome ol{grid-template-columns:1fr;gap:28px}
+  .grid3{grid-template-columns:1fr;gap:16px}
+  .grid3.a img:first-child{grid-column:auto}
+  .grid3.a img:first-child{height:220px}
+  .grid3.a img:last-child{height:360px}
+  .grid3.b img{height:260px}
+  .videos{grid-template-columns:1fr;gap:16px}
+  .videos a{padding:24px}
+  .videos .t{font-size:24px}
+  .contact-text .btn{align-self:stretch}
+  .contact dl div{flex-direction:column;gap:6px;padding:16px 0}
+  .contact dd{text-align:left}
+  .site-footer{flex-direction:column;padding-block:20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
